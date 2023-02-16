@@ -32,7 +32,7 @@ const createBrand = async (req, res) => {
 
 const getAllBrand = async (req, res, next) => {
   try {
-    const brands = await Brand.find();
+    const brands = await Brand.find().populate("models");
     return res.status(200).json(brands);
   } catch (error) {
     next(error);
@@ -43,8 +43,7 @@ const getAllBrand = async (req, res, next) => {
 const getBrandById = async (req, res, next) => {
   try {
     const brandId = req.params.id;
-    // const brand = await Brand.findById(brandId).populate('models');
-    const brand = await Brand.findById(brandId);
+    const brand = await Brand.findById(brandId).populate('models');
     if (!brand) {
       return res.status(404).json({ message: 'Brand not found' });
     }
