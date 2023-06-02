@@ -10,7 +10,7 @@ To install and run the Car Management System on your local machine, follow these
 
 1.  Clone the repository:
 
-    $ git clone https://github.com/your-username/car-management-system.git
+    $ git clone[ https://github.com/your-username/car-management-system.git](https://github.com/dxtaner/CarNodejsApi/)
 
 3.  Navigate to the project directory:
 
